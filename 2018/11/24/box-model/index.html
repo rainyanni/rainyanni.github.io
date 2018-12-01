@@ -79,14 +79,19 @@
 
 
 
+<meta name="description" content="什么是盒子模型简单的说每个HTML标签就是一个方块，一个方块里面可以包含多个方块。涉及到的位置信息包含：margin，border,padding,content。它们之间的关系是margin包着border包着padding包着content。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://yoursite.com/2018/11/24/test-my-site/index.html">
+<meta property="og:title" content="盒子模型">
+<meta property="og:url" content="http://yoursite.com/2018/11/24/box-model/index.html">
 <meta property="og:site_name" content="Rainy&#39;s Blog">
+<meta property="og:description" content="什么是盒子模型简单的说每个HTML标签就是一个方块，一个方块里面可以包含多个方块。涉及到的位置信息包含：margin，border,padding,content。它们之间的关系是margin包着border包着padding包着content。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-24T13:40:26.000Z">
+<meta property="og:image" content="http://pj1x0uv7f.bkt.clouddn.com/box.png">
+<meta property="og:updated_time" content="2018-12-01T10:42:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test_my_site">
+<meta name="twitter:title" content="盒子模型">
+<meta name="twitter:description" content="什么是盒子模型简单的说每个HTML标签就是一个方块，一个方块里面可以包含多个方块。涉及到的位置信息包含：margin，border,padding,content。它们之间的关系是margin包着border包着padding包着content。">
+<meta name="twitter:image" content="http://pj1x0uv7f.bkt.clouddn.com/box.png">
 
 
 
@@ -116,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/24/test-my-site/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/24/box-model/">
 
 
 
 
 
-  <title>test_my_site | Rainy's Blog</title>
+  <title>盒子模型 | Rainy's Blog</title>
   
 
 
@@ -229,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/24/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/24/box-model/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rainy Yan">
@@ -246,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test_my_site</h1>
+          <h1 class="post-title" itemprop="name headline">盒子模型</h1>
         
 
         <div class="post-meta">
@@ -296,7 +301,12 @@
       
 
       
-        
+        <h2 id="什么是盒子模型"><a href="#什么是盒子模型" class="headerlink" title="什么是盒子模型"></a>什么是盒子模型</h2><p>简单的说每个HTML标签就是一个方块，一个方块里面可以包含多个方块。涉及到的位置信息包含：margin，border,padding,content。它们之间的关系是margin包着border包着padding包着content。<br><a id="more"></a></p>
+<p><img src="http://pj1x0uv7f.bkt.clouddn.com/box.png" alt="盒子"></p>
+<h2 id="盒子模型分类"><a href="#盒子模型分类" class="headerlink" title="盒子模型分类"></a>盒子模型分类</h2><h3 id="w3c标准盒子模型"><a href="#w3c标准盒子模型" class="headerlink" title="w3c标准盒子模型"></a>w3c标准盒子模型</h3><p>content+padding+border即内容的(width)+内边距的再加上边框，而不加上margin。把margin算上的是盒子占据的位置，而不是盒子的大小。</p>
+<h3 id="IE盒子模型"><a href="#IE盒子模型" class="headerlink" title="IE盒子模型"></a>IE盒子模型</h3><p>IE盒模型又称怪异盒模型，与标准盒模型的主要区别是width/height，标准盒模型的width/height指的是content的width/height，IE盒模型的width/height指的是content+padding+border</p>
+<h2 id="如何控制盒模型"><a href="#如何控制盒模型" class="headerlink" title="如何控制盒模型"></a>如何控制盒模型</h2><h3 id="box-sizing属性可以控制盒模型（IE8-）"><a href="#box-sizing属性可以控制盒模型（IE8-）" class="headerlink" title="box-sizing属性可以控制盒模型（IE8+）"></a>box-sizing属性可以控制盒模型（IE8+）</h3><p>box-sizing为border-box，是指怪异盒模型<br>box-sizing为content-box，是指标准盒模型，默认就是标准盒模型<br>如果在ie6,7,8中DOCTYPE缺失会触发怪异模式。</p>
+
       
     </div>
     
@@ -380,8 +390,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -423,6 +442,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是盒子模型"><span class="nav-number">1.</span> <span class="nav-text">什么是盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子模型分类"><span class="nav-number">2.</span> <span class="nav-text">盒子模型分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#w3c标准盒子模型"><span class="nav-number">2.1.</span> <span class="nav-text">w3c标准盒子模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE盒子模型"><span class="nav-number">2.2.</span> <span class="nav-text">IE盒子模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何控制盒模型"><span class="nav-number">3.</span> <span class="nav-text">如何控制盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#box-sizing属性可以控制盒模型（IE8-）"><span class="nav-number">3.1.</span> <span class="nav-text">box-sizing属性可以控制盒模型（IE8+）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
